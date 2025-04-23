@@ -10,7 +10,6 @@ import {
     extractBasicFeatures,
 } from "./reinforcement/approx_learn_features";
 import ApproximateQAgent from "./reinforcement/learning_agents";
-import { join } from "path";
 
 const q_agent = new ApproximateQAgent<
     PokemonBattleState,
@@ -47,6 +46,7 @@ const runBattle = async (gameNum: number, train: boolean) => {
 
     const tracker = new BattleTracker(streams.omniscient, `Game ${gameNum}`);
     const p1 = new ApproximateQPlayer(streams.p1, q_agent, 1, tracker, train);
+    // const p1 = new BasicAIPlayer(streams.p1, tracker, 1);
     const p2 = new RandomPlayerAI(streams.p2);
 
     void p1.start();

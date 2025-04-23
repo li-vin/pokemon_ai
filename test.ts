@@ -24,6 +24,7 @@ const p2 = new RandomPlayerAI(streams.p2);
 // void p2.start();
 
 let acc = Dex.forGen(4).moves.get("Return");
+
 console.log(acc);
 
 // void (async () => {

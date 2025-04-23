@@ -60,7 +60,11 @@ class BattleTracker {
 
     writeToFile(fname) {
         console.log(`Logging ${this.prefix}`);
-        const writer = fs.createWriteStream(join(__dirname, fname), {
+        const path = join(__dirname, "logs/");
+        if (!fs.existsSync(path)) {
+            fs.mkdirSync(path);
+        }
+        const writer = fs.createWriteStream(join(path, fname), {
             flags: "w",
         });
         writer.write(this.logBuffer.join("\n"));

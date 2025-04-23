@@ -66,7 +66,7 @@ const runBattle = async (gameNum: number, train: boolean) => {
     await tracker.start();
 
     if (tracker.log) {
-        tracker.writeToFile(`logs/${gameNum}.txt`);
+        tracker.writeToFile(`${gameNum}.txt`);
     }
     return tracker.winner === "Player";
 };

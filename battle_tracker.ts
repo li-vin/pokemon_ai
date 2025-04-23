@@ -4,6 +4,10 @@ import * as fs from "fs";
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 
+/**
+ * A class to track the winner of a battle, as well as log the battle if an
+ * error occurs.
+ */
 class BattleTracker {
     readonly stream: Streams.ObjectReadWriteStream<string>;
     public winner: string;

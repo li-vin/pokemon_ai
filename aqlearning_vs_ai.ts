@@ -10,6 +10,8 @@ import {
 } from "./reinforcement/approx_learn_features";
 import ApproximateQAgent from "./reinforcement/learning_agents";
 
+// Runs a single game with an approximate Q-learning agent against the basic-ai
+
 Teams.setGeneratorFactory(TeamGenerators);
 
 const streams = BattleStreams.getPlayerStreams(

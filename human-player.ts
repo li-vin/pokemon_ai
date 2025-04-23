@@ -2,7 +2,9 @@ import { BattleStreams, PRNG } from "@pkmn/sim";
 import * as readline from "readline/promises";
 import { splitFirst } from "./request_utils";
 
-// Only supports singles format
+/**
+ * A barebones implementation to support a human player.
+ */
 class HumanPlayer extends BattleStreams.BattlePlayer {
     constructor(playerStream, debug = false) {
         super(playerStream, debug);

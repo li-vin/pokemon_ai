@@ -14,6 +14,10 @@ import {
 } from "./approx_learn_features";
 import ApproximateQAgent from "./learning_agents";
 
+/**
+ * The environment for the approximate q-learning agent to operate.
+ * Acts as a player.
+ */
 class ApproximateQPlayer extends BattleStreams.BattlePlayer {
     waitForSwitch: boolean;
     state: PokemonBattleState;

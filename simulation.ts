@@ -27,6 +27,13 @@ const q_agent = new ApproximateQAgent<
     0.0000001
 );
 // epsilon, gamma, alpha
+
+/**
+ * Runs 2 agents against each other once.
+ * @param gameNum the index of the battle to run.
+ * @param train Whether or not the approximate q-learning agent is being trained
+ * @returns Promise<boolean> which resolves to whether or not p1 ("Player") won the game
+ */
 const runBattle = async (gameNum: number, train: boolean) => {
     Teams.setGeneratorFactory(TeamGenerators);
 
@@ -64,6 +71,11 @@ const runBattle = async (gameNum: number, train: boolean) => {
     return tracker.winner === "Player";
 };
 
+/**
+ * Performs runBattle several times, and prints out the winrate of player 1.
+ * @param numTraining The number of training battles to run.
+ * @param numTesting The number of testing battles to run.
+ */
 const runBattles = async (numTraining, numTesting) => {
     const trainingRuns = range(1, numTraining);
     const testingRuns = range(1, numTesting);

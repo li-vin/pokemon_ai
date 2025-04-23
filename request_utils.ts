@@ -1,7 +1,11 @@
 import { GenderName } from "@pkmn/sim";
 import { Generations, Pokemon } from "@smogon/calc";
 import { PokemonInfo } from "./reinforcement/approx_learn_features";
-import { create } from "domain";
+
+/** Miscelaneous util functions for parsing the simulator requests,
+ *  calculating damage, creating Pokemon, etc.
+ *
+ */
 
 function range(start, end, step = 1) {
     if (end === undefined) {

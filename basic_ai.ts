@@ -11,9 +11,10 @@ import { calculate } from "@smogon/calc/dist/calc";
 import { Move } from "@smogon/calc/dist/move";
 import { error } from "console";
 
-// simple ai that chooses the move with the highest damage calc.
-// only reads info on the active opponent pokemon.
-// when forced to switch, chooses default.
+/**simple ai that chooses the move with the highest damage calc.
+ * only reads info on the active opponent pokemon.
+ * when forced to switch, chooses default.
+ */
 class BasicAIPlayer extends BattleStreams.BattlePlayer {
     // readonly enemyStream: Streams.ObjectReadWriteStream<string>;
     enemyPokemon: any;
